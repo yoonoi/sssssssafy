@@ -2,7 +2,7 @@ package medium;
 
 import java.util.Scanner;
 
-public class sum1209 {
+public class Sum1209 {
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
