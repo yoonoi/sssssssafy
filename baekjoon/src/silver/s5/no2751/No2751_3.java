@@ -1,4 +1,4 @@
-package silver.s5;
+package silver.s5.no2751;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package silver.s5;
+package silver.s5.no2751;
 
 import java.util.Arrays;
 import java.util.Scanner;
