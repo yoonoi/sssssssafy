@@ -8,18 +8,17 @@ import java.util.StringTokenizer;
 
 public class No3273_3 {
 	public static void main(String[] args) throws IOException {
-		// 2. BufferedReader 와 set 과 Stringtokenizer 사용해보기
-		// 메모리..
+		// 3. Stringtokenizer 사용
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 		
 		int n = Integer.parseInt(br.readLine());
+		
+		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 		
 		HashSet<Integer> set = new HashSet<>();
 		
 		for(int i=0; i<n; i++) {
-			int token = Integer.parseInt(st.nextToken());
-			set.add(token);
+			set.add(Integer.parseInt(st.nextToken()));
 		}
 		
 		int x = Integer.parseInt(br.readLine());
@@ -33,9 +32,5 @@ public class No3273_3 {
 		
 		cnt /= 2;
 		System.out.println(cnt);
-		
-		Runtime.getRuntime().gc();
-		long usedMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
-		System.out.print(usedMemory + " bytes");
 	}
 }
