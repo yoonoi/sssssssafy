@@ -1,4 +1,4 @@
-package silver.s4;
+package silver.s4.no1920;
 
 import java.util.Scanner;
 
