@@ -9,7 +9,6 @@ import java.util.StringTokenizer;
 public class No10815_2 {
 
 	public static void main(String[] args) throws IOException {
-		// 시간 초과
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		int n = Integer.parseInt(br.readLine());
