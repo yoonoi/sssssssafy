@@ -101,6 +101,34 @@ public class No1406_3 {
 			}
 		}
 		
+		// 첨에 스위치문 써봤던거
+		for(int tc=0; tc<m; tc++) {
+			String input = br.readLine();
+			
+			switch(input.split(" ")[0]) {
+			case "L":
+				if(cur > 0) cur -= 1;
+				break;
+			case "D":
+				if(cur < list.size()) cur += 1;
+				break;
+			case "B":
+				if(cur > 0) {
+					list.remove(cur - 1);
+					cur -= 1;
+				}
+				break;
+			case "P":
+				list.add(cur, input.split(" ")[1].charAt(0));
+				cur += 1;
+				break;
+			}
+		}
+		
+		
+		
+		
+		
 		for(char c : list) {
 			System.out.print(c);
 		}
