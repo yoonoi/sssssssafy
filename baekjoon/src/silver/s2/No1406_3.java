@@ -54,7 +54,6 @@ public class No1406_3 {
 		}
 		
 		//출력시간 줄이려고 StringBuilder 로 변경
-
 		StringBuilder sb = new StringBuilder();
 		for(char c : list) {
 			sb.append(c);
@@ -124,10 +123,6 @@ public class No1406_3 {
 				break;
 			}
 		}
-		
-		
-		
-		
 		
 		for(char c : list) {
 			System.out.print(c);
