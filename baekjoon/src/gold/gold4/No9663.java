@@ -63,7 +63,7 @@ public class No9663 {
                 return false;
             }
         }
-        
+          
         return true;
     }
     
