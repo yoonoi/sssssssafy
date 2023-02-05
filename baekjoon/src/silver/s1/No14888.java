@@ -76,7 +76,7 @@ public class No14888 {
 		recursion(arr[0], 1);
 		
 		System.out.println(max);
-		System.out.println(min);
+		System.out.println(min); 
 		
 	}
 
