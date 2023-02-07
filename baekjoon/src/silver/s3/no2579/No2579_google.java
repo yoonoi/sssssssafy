@@ -1,4 +1,4 @@
-package silver.s3;
+package silver.s3.no2579;
 
 import java.util.Scanner;
 

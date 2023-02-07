@@ -1,4 +1,4 @@
-package silver.s3;
+package silver.s3.no2579;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,23 +7,18 @@ import java.io.InputStreamReader;
 // 이 문제 처음에 풀 때 마지막 계단을 무조건 밟아야된다고해서 
 // 인덱스를 반대로 해서 입력값을 배열에 저장하고
 // 마지막 계단부터 트리구조로 최댓값을 구해야겠다 생각하고 풀었는데 
-// 어디가 잘못된건지 이해가안되서 한번 올려봅니다
-// 피드백 해주실 분 계시면 연락주세요,, 
+// 어디가 잘못된건지 이해가안되서 계속 질질끌었는데요
 
-// 문득 생각났는데
-// arr[0]이 안밟히는게 최대가 될 수 있어서 에러나는듯
-// 배열에서 arr[0]을 빼고 최대구한 후에 arr[0] 더해주자 -> 이것도안될듯 다시바꿔야댈듯
-public class No2579_3 {
+// 문득 생각해보니 
+// arr[0]이 안밟히는게 최대가 될 수 있어서 틀리는거같아요 
+// 시간될 때 이방법도 다시해보겠슴다
+public class No2579_2 {
 	
 	static int[] arr;
 	static int n;
 	static int[] dp; // 각 계단에서의 최댓값을 표현하는 배열
 	
 	static int max(int n) {
-		// 예) 5, 10, 15, 20, 25, 30 일때 최댓값이 dp[n-1]이 아님(첫번째 계단을 안밟을 때)
-		// 따라서 return dp[n-1]을 하면안되고 dp중에 가장 큰 값을 넣어야함
-		int max = arr[0];  // 크기가 1 이상이면 무조건 마지막 계단밟으니까 초기화값 arr[0]
-		
 		// 계단이 없으면 0 반환
 		if(n == 0) return 0;
 		
@@ -32,9 +27,8 @@ public class No2579_3 {
 			dp[0] = arr[0];
 		
 		// 계단이 2개 이상이라면 2번째 계단의 최댓값은 첫번째계단 + 자기자신
-		// 마지막 계단 제외하고 대입
 		if(n >= 2)
-			dp[1] = arr[1];
+			dp[1] = arr[0] + arr[1];
 		
 		// 계단이 3개라고 하면
 		// 1. 첫번째 계단 + 세번째 계단
@@ -48,7 +42,9 @@ public class No2579_3 {
 			dp[i] = Math.max(dp[i-2] + arr[i], dp[i-3] + arr[i-1] + arr[i]);
 		}
 		
-
+		// 예) 5, 10, 15, 20, 25, 30 일때 최댓값이 dp[n-1]이 아님(첫번째 계단을 안밟을 때)
+		// 따라서 return dp[n-1]을 하면안되고 dp중에 가장 큰 값을 넣어야함
+		int max = 0;
 		
 		for(int i=0; i<n; i++) 
 			max = Math.max(max, dp[i]);
