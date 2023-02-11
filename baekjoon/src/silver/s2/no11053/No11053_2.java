@@ -28,7 +28,7 @@ public class No11053_2 {
 			// i보다 작은 j에 대해 반복문을 돌리면서
 			for(int j=0; j<i; j++) {
 				// arr[i]보다 작고, set에 없는 숫자이면(중복일 때 카운트 안하기 위해)
-				if(arr[j] < arr[i] && !set.contains(arr[j])) {
+				if(arr[j] < arr[i] && !set.contains(arr[j])) {                      // 태희님 피드백 단순히 arr[j] 가 arr[i]보다 작다고 cnt하면 안됨 반례 1324 -> dp 1224 나옴
 					// 카운트 한번 세주고
 					dp[i]++;
 					// set에 해당 작은수를 저장해준다.
@@ -38,8 +38,8 @@ public class No11053_2 {
 			}
 		}
 		
-//		System.out.println(Arrays.toString(arr));
-//		System.out.println(Arrays.toString(dp));
+		System.out.println(Arrays.toString(arr));
+		System.out.println(Arrays.toString(dp));
 		
 		int maxCnt = 0;
 		for(int i=0; i<n; i++) 
